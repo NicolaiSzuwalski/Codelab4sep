@@ -13,10 +13,25 @@ const myAnsverButton = document.getElementById('answerButton');
 const myAnsverFeedbackElement = document.getElementById('answerFeedback');
 
 myAnsverButton.addEventListener('click', () => {
-
-    /* din kode her.  husk at skrive view funktion der viser om svaret er korrekt i myAnsverFeedbackElement, brug evt. innerHTML*/
-
+    prevent.Default(event);
+    console.log('Clicked');
 });
+
+function view(){
+  if (myAnsverInput.value === "nej") {
+    myAnsverFeedbackElement.innerHTML = "nej";
+  }
+  else if (myAnsverInput.value === "ja") {
+    myAnsverFeedbackElement.innerHTML = "ja";
+  }
+  else {
+    myAnsverFeedbackElement.innerHTML = "Ja i disney film";
+  }
+}
+
+
+
+
 
 /*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
 nej
